@@ -2,206 +2,441 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-
-<!-- ===== META PARA GOOGLE - VAMPY SECURITY / VSEC-MX ===== -->
-<title>VSEC-MX | Vampy Security - Aprende Ciberseguridad y Hacking Ético Teórico en Español</title>
-<meta name="description" content="VSEC-MX de Vampy Security. Aprende ciberseguridad y hacking ético 100% teórico en español. Redes, Sistemas Operativos, Programación, Cómo funcionan las webs y Hacking Ético. Sin instalar nada, solo videos y teoría.">
-<meta name="keywords" content="Vampy Security, VSEC-MX, VSEC MX, Vampy, ciberseguridad, hacking etico, hacking etico teorico, aprender hacking, redes de computadoras, sistemas operativos, programacion, como funcionan los sitios web, ciberseguridad mexico, curso hacking gratis">
+<title>VSEC-MX | Vampy Security - Academia de Ciberseguridad y Hacking Ético Teórico</title>
+<meta name="description" content="VSEC-MX de Vampy Security. Academia de ciberseguridad y hacking ético 100% teórico en español. Formación sólida desde cero hasta hacking ético profesional.">
+<meta name="keywords" content="Vampy Security, VSEC-MX, ciberseguridad, hacking etico, academia ciberseguridad, redes, sistemas operativos, programacion, hacking etico teorico">
 <meta name="author" content="Vampy Security - VSEC-MX">
 <meta name="robots" content="index, follow">
-<meta name="language" content="Spanish">
-<meta name="geo.region" content="MX">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="canonical" href="https://vampysec.github.io/Vsec/">
 
-<!-- Para que se vea bien en WhatsApp, Facebook, etc -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="VSEC-MX | Vampy Security - Hacking Ético Teórico en Español">
-<meta property="og:description" content="Vampy Security presenta VSEC-MX. Aprende ciberseguridad desde cero, 100% teórico. Redes, Sistemas, Programación, Webs y Hacking Ético. Sin lab, sin login, solo teoría y videos.">
+<meta property="og:title" content="VSEC-MX | Vampy Security - Academia de Hacking Ético Teórico">
+<meta property="og:description" content="Formación sólida y 100% teórica en ciberseguridad. Desde lo más básico hasta hacking ético profesional.">
 <meta property="og:url" content="https://vampysec.github.io/Vsec/">
 <meta property="og:site_name" content="Vampy Security - VSEC-MX">
-<meta property="og:locale" content="es_MX">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="VSEC-MX | Vampy Security - Hacking Ético Teórico">
-<meta name="twitter:description" content="Vampy Security. Aprende hacking ético teórico en español, desde cero.">
-
-<!-- ===== RESPONSIVO ===== -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-  body{background:#0a0a0a;color:#fff;line-height:1.6}
-  header{background:#0d1117;padding:20px 15px;text-align:center;border-bottom:3px solid #1e90ff;position:sticky;top:0;z-index:10}
-  header h1{font-size:32px;color:#1e90ff;letter-spacing:2px;line-height:1.1}
-  header h1 span{color:#fff}
-  header .marca{color:#1e90ff;font-weight:bold;font-size:13px;letter-spacing:3px;margin-bottom:2px}
-  header p{color:#aaa;font-size:14px;margin-top:5px}
-  nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:15px}
-  nav button{background:#161b22;color:#fff;border:1px solid #30363d;padding:10px 14px;border-radius:20px;cursor:pointer;font-weight:bold;font-size:14px}
-  nav button.active{background:#1e90ff;border-color:#1e90ff}
-  main{max-width:900px;margin:0 auto;padding:20px 15px;width:100%}
-  .hero{background:#111827;border:1px solid #1e90ff;border-radius:15px;padding:25px 18px;text-align:center;margin-bottom:20px}
-  .hero h2{font-size:26px;margin-bottom:10px;line-height:1.2}
-  .hero p{color:#bbb;line-height:1.6}
-  .badge{display:inline-block;background:#1e90ff;padding:5px 12px;border-radius:20px;font-size:12px;margin:5px 2px}
-  .card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px;margin-bottom:15px}
-  .card h3{color:#1e90ff;margin-bottom:8px}
-  .card p{color:#ddd;font-size:15px;line-height:1.7;margin-bottom:12px}
-  .teoria{background:#0d1117;border-left:4px solid #1e90ff;padding:14px 15px;margin-top:12px;border-radius:0 10px 10px 0}
-  .teoria p{margin:0;color:#ddd;line-height:1.7}
-  .btn{display:inline-block;background:#1e90ff;color:#fff;text-decoration:none;padding:12px 20px;border-radius:20px;margin-top:10px;font-weight:bold;border:none;cursor:pointer;font-size:15px;width:auto}
-  footer{text-align:center;color:#555;padding:30px 15px;font-size:13px;line-height:1.6}
-  video{width:100%;height:auto;border-radius:10px;margin-top:10px;background:#000;max-height:500px}
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-  @media (max-width: 768px){
-    header{padding:15px 10px}
-    header h1{font-size:24px}
-    header p{font-size:12px}
-    nav{gap:6px}
-    nav button{padding:8px 10px;font-size:12px;flex:1 1 40%;min-width:120px}
-    main{padding:15px 10px}
-    .hero{padding:18px 12px}
-    .hero h2{font-size:21px}
-    .card{padding:14px 12px}
-    .card p{font-size:14px}
-    .btn{width:100%;text-align:center}
-    video{max-height:250px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:#080b10;
+    color:#e6edf3;
+    font-family:'Inter', system-ui, -apple-system, sans-serif;
+    line-height:1.7;
+    font-size:16px;
   }
-  @media (max-width: 380px){
-    header h1{font-size:20px}
-    nav button{flex:1 1 100%;min-width:100%}
+
+  header{
+    background:#0d1117;
+    padding:22px 20px 18px;
+    text-align:center;
+    border-bottom:1px solid #21262d;
+    position:sticky;
+    top:0;
+    z-index:100;
+    backdrop-filter:blur(12px);
+  }
+  .marca{
+    color:#58a6ff;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  header h1{
+    font-size:34px;
+    font-weight:700;
+    color:#58a6ff;
+    letter-spacing:1px;
+    line-height:1.1;
+  }
+  header h1 span{color:#e6edf3}
+  header p{
+    color:#8b949e;
+    font-size:14px;
+    margin-top:6px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:center;
+    margin-top:18px;
+  }
+  nav button{
+    background:#161b22;
+    color:#c9d1d9;
+    border:1px solid #30363d;
+    padding:9px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+    font-size:13.5px;
+    transition:all 0.2s ease;
+  }
+  nav button:hover{
+    background:#21262d;
+    border-color:#58a6ff;
+    color:#fff;
+  }
+  nav button.active{
+    background:#1f6feb;
+    border-color:#1f6feb;
+    color:#fff;
+  }
+
+  main{
+    max-width:880px;
+    margin:0 auto;
+    padding:30px 20px 60px;
+  }
+
+  .hero{
+    background:linear-gradient(145deg, #0d1117 0%, #161b22 100%);
+    border:1px solid #30363d;
+    border-radius:16px;
+    padding:32px 28px;
+    margin-bottom:28px;
+    text-align:center;
+  }
+  .hero h2{
+    font-size:28px;
+    font-weight:700;
+    color:#e6edf3;
+    margin-bottom:12px;
+  }
+  .hero .sub{
+    color:#58a6ff;
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:1.5px;
+    margin-bottom:16px;
+  }
+  .hero p{
+    color:#8b949e;
+    font-size:15.5px;
+    max-width:640px;
+    margin:0 auto 12px;
+  }
+
+  .badge{
+    display:inline-block;
+    background:rgba(31,111,235,0.15);
+    color:#58a6ff;
+    border:1px solid rgba(31,111,235,0.4);
+    padding:5px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:500;
+    margin:4px 3px;
+  }
+
+  .card{
+    background:#0d1117;
+    border:1px solid #21262d;
+    border-radius:14px;
+    padding:24px 22px;
+    margin-bottom:20px;
+  }
+  .card h3{
+    color:#58a6ff;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:16px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  .teoria{
+    background:#161b22;
+    border-left:3px solid #1f6feb;
+    padding:14px 18px;
+    margin-bottom:12px;
+    border-radius:0 10px 10px 0;
+  }
+  .teoria p{
+    margin:0;
+    color:#c9d1d9;
+    font-size:15px;
+    line-height:1.75;
+  }
+
+  .btn{
+    display:inline-block;
+    background:#1f6feb;
+    color:#fff;
+    text-decoration:none;
+    padding:11px 22px;
+    border-radius:8px;
+    margin-top:14px;
+    font-weight:600;
+    font-size:14.5px;
+    border:none;
+    cursor:pointer;
+    transition:background 0.2s;
+  }
+  .btn:hover{background:#388bfd}
+
+  .modulo-card{
+    background:#0d1117;
+    border:1px solid #21262d;
+    border-radius:12px;
+    padding:20px 22px;
+    margin-bottom:14px;
+    transition:border-color 0.2s;
+  }
+  .modulo-card:hover{border-color:#30363d}
+  .modulo-card h3{
+    color:#e6edf3;
+    font-size:17px;
+    margin-bottom:6px;
+  }
+  .modulo-card p{
+    color:#8b949e;
+    font-size:14px;
+    margin-bottom:12px;
+  }
+
+  footer{
+    text-align:center;
+    color:#484f58;
+    padding:40px 20px;
+    font-size:13px;
+    border-top:1px solid #21262d;
+  }
+  footer b{color:#8b949e}
+
+  video{
+    width:100%;
+    border-radius:10px;
+    margin-top:12px;
+    background:#000;
+    max-height:480px;
+  }
+
+  @media (max-width:768px){
+    header{padding:16px 14px}
+    header h1{font-size:26px}
+    nav button{padding:8px 12px;font-size:12.5px}
+    main{padding:20px 14px 50px}
+    .hero{padding:24px 18px}
+    .hero h2{font-size:22px}
+    .card{padding:18px 16px}
+    .btn{width:100%;text-align:center}
   }
 </style>
-
-<!-- Datos para Google - Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "VSEC-MX - Vampy Security",
-  "alternateName": ["Vampy Security", "VSEC-MX"],
-  "url": "https://vampysec.github.io/Vsec/",
-  "description": "Vampy Security presenta VSEC-MX. Aprende ciberseguridad y hacking ético 100% teórico en español. Redes, Sistemas Operativos, Programación, Webs y Hacking Ético.",
-  "inLanguage": "es-MX",
-  "author": { "@type": "Organization", "name": "Vampy Security" }
-}
-</script>
 </head>
 <body>
 
 <header>
-  <div class="marca">VAMPY SECURITY</div>
+  <div class="marca">Vampy Security</div>
   <h1>VSEC<span>-MX</span></h1>
-  <p>Vampy Security | 100% Teórico | Sin lab, sin login, sin CTF</p>
+  <p>Academia de Ciberseguridad · 100% Teórico · Formación Profesional</p>
   <nav id="tabs"></nav>
 </header>
 
 <main id="contenido"></main>
 
-<footer><b style="color:#888">VAMPY SECURITY - VSEC-MX © 2026</b><br>Vampy Security | Hacking Ético Teórico en Español</footer>
+<footer>
+  <b>VAMPY SECURITY — VSEC-MX © 2026</b><br>
+  Formación teórica en Ciberseguridad y Hacking Ético
+</footer>
 
 <script>
-// =========================================================
-// AQUI AGREGAS TODO. SOLO TEXTO NORMAL Y LINKS
-// =========================================================
 const MODULOS = [
   {
     id: "inicio",
     titulo: "INICIO",
-    subtitulo: "Bienvenido a VSEC-MX de Vampy Security",
+    subtitulo: "Bienvenido a la Academia VSEC-MX",
     teorias: [
-      "Bienvenido a Vampy Security. Esto es VSEC-MX, tu academia de ciberseguridad 100% teórica en español.",
-      "Aprende desde cero, sin instalar nada, solo viendo videos y estudiando teoría. Inicias en Redes y avanzas hasta Hacking Ético."
+      "VSEC-MX es la academia teórica de Vampy Security. Aquí se forma a personas que quieren entender de verdad cómo funcionan los sistemas, las redes y la seguridad informática.",
+      "No vendemos humo. No prometemos que en 30 días serás un hacker. Aquí se construye base sólida, paso a paso, desde lo más elemental hasta los conceptos profesionales del hacking ético.",
+      "Todo el contenido es 100% teórico. No se requieren instalaciones, laboratorios ni herramientas. El objetivo es que entiendas profundamente los fundamentos antes de tocar cualquier entorno práctico.",
+      "La ruta de formación está diseñada por niveles: Redes → Sistemas Operativos → Programación → Funcionamiento de la Web → Hacking Ético. Cada módulo se apoya en el anterior.",
+      "Al terminar esta academia tendrás una base real y profesional para continuar hacia laboratorios controlados, certificaciones o estudios más avanzados, siempre desde el lado legal y ético."
     ],
     videos: []
   },
   {
     id: "redes",
-    titulo: "REDES DE COMPUTADORAS",
-    subtitulo: "Módulo 1 - Vampy Security - La base de todo",
+    titulo: "REDES",
+    subtitulo: "Módulo 1 · Fundamentos de Redes de Computadoras",
     teorias: [
-      "¿Qué es una red? Es un conjunto de computadoras conectadas que comparten información. LAN es local, WAN es amplia, Internet es la red de redes.",
-      "Modelo OSI y TCP/IP: Son las reglas de cómo viaja la información. OSI tiene 7 capas, TCP/IP es el que usamos en la vida real.",
-      "IP, DNS y Puertos: La IP es la dirección de tu equipo en internet, el DNS es como la agenda que traduce nombres a IPs, y los puertos son las puertas de entrada."
+      "Todo en informática se reduce a bits. Un bit es la unidad mínima de información y solo puede valer 0 o 1. Ocho bits forman un byte. Los bytes se agrupan en KB, MB, GB, etc. Entender esto es el primer paso.",
+      "Una red es un conjunto de dispositivos interconectados que intercambian información. Puede ser tan pequeña como dos computadoras o tan grande como Internet.",
+      "Clasificación por alcance: LAN (Local Area Network) cubre un área pequeña (casa, oficina). WAN (Wide Area Network) cubre grandes distancias. Internet es la mayor WAN existente: la red de redes.",
+      "Para que los dispositivos se comuniquen necesitan reglas comunes llamadas protocolos. El conjunto de protocolos más importante del mundo es TCP/IP.",
+      "El modelo OSI es un marco teórico de 7 capas: Física, Enlace de datos, Red, Transporte, Sesión, Presentación y Aplicación. Sirve para entender y diagnosticar problemas de comunicación.",
+      "El modelo TCP/IP (el que realmente se usa) tiene 4 capas: Acceso a la red, Internet, Transporte y Aplicación. Es más práctico y es el estándar de Internet.",
+      "La dirección IP identifica de forma única a un dispositivo en una red. IPv4 usa 32 bits (ejemplo: 192.168.1.10). IPv6 usa 128 bits porque las direcciones IPv4 se agotaron.",
+      "Existen direcciones IP públicas (enrutables en Internet) e IP privadas (solo válidas dentro de una red local: 10.0.0.0/8, 172.16.0.0/12 y 192.168.0.0/16).",
+      "El DNS (Domain Name System) traduce nombres legibles (ejemplo: google.com) a direcciones IP numéricas. Sin DNS tendríamos que memorizar números.",
+      "Los puertos permiten que múltiples servicios corran en una misma IP. Hay 65.535 puertos. Los más conocidos: 80 (HTTP), 443 (HTTPS), 22 (SSH), 21 (FTP), 25 (SMTP), 53 (DNS).",
+      "TCP es un protocolo orientado a conexión: garantiza entrega ordenada y confiable (como una llamada telefónica). UDP es orientado a datagrama: más rápido pero sin garantías (como enviar una carta).",
+      "HTTP es el protocolo de transferencia de hipertexto. HTTPS es la versión cifrada mediante TLS. Hoy en día casi todo el tráfico web debería ir por HTTPS.",
+      "Un switch opera en la capa de enlace y conecta dispositivos dentro de la misma red local. Un router opera en la capa de red y conecta diferentes redes entre sí.",
+      "La máscara de subred determina qué parte de una dirección IP corresponde a la red y qué parte al host. Ejemplo: 255.255.255.0 (o /24) indica 24 bits de red.",
+      "Conceptos adicionales importantes: gateway (puerta de enlace), NAT (traducción de direcciones), DHCP (asignación automática de IP), ARP (resolución de direcciones MAC) y traceroute.",
+      "Dominar redes no es opcional. Es la base sobre la que se construye absolutamente todo lo demás en ciberseguridad."
     ],
-    videos: [
-      // "https://files.catbox.moe/tu-video-redes.mp4",
-    ]
+    videos: []
   },
   {
     id: "sistemas",
-    titulo: "SISTEMAS OPERATIVOS",
-    subtitulo: "Módulo 2 - Vampy Security - Windows y Linux",
+    titulo: "SISTEMAS",
+    subtitulo: "Módulo 2 · Sistemas Operativos (Windows y Linux)",
     teorias: [
-      "¿Qué es un Sistema Operativo? Es el programa que controla todo. Sin él, tu computadora no funciona.",
-      "Linux vs Windows: Linux es el favorito en ciberseguridad, Windows es el más usado. Un profesional debe conocer los dos."
+      "El Sistema Operativo es el software que gestiona el hardware y proporciona una plataforma para que se ejecuten las aplicaciones. Sin él, la computadora es solo un conjunto de componentes inútiles.",
+      "Los dos sistemas más relevantes en ciberseguridad son Windows (el más extendido en escritorios) y Linux (el dominante en servidores, herramientas de seguridad y entornos profesionales).",
+      "El kernel es el núcleo del sistema operativo. Se comunica directamente con el hardware y gestiona recursos (CPU, memoria, dispositivos). En Linux el kernel es de código abierto.",
+      "Un proceso es un programa en ejecución. Cada proceso tiene un identificador único (PID), un espacio de memoria y un estado (en ejecución, esperando, terminado, etc.).",
+      "El sistema de archivos organiza cómo se almacenan los datos. Windows usa principalmente NTFS. Linux usa ext4, XFS, Btrfs, entre otros. En Linux casi todo se representa como un archivo.",
+      "La estructura de directorios en Linux comienza en la raíz (/). Carpetas importantes: /etc (configuración), /home (usuarios), /var (logs y datos variables), /bin y /usr/bin (ejecutables), /tmp (temporal).",
+      "Los permisos en Linux controlan quién puede leer, escribir o ejecutar un archivo. Se representan con rwx para propietario, grupo y otros, o en notación octal (ejemplo: 755, 644).",
+      "El usuario root tiene privilegios totales en Linux. En Windows el equivalente es la cuenta de Administrador. El principio de mínimo privilegio dice que se deben usar cuentas limitadas siempre que sea posible.",
+      "Los servicios (daemons en Linux) son procesos que corren en segundo plano ofreciendo funcionalidades: servidores web, bases de datos, firewalls, cron, etc.",
+      "El Registro de Windows es una base de datos jerárquica donde el sistema y las aplicaciones guardan configuraciones. En Linux la configuración suele estar en archivos de texto planos.",
+      "La memoria virtual permite usar espacio en disco como si fuera RAM adicional (archivo de paginación en Windows, swap en Linux). Es fundamental para el rendimiento del sistema.",
+      "Los logs registran eventos del sistema. En Linux suelen estar en /var/log. En Windows se consultan con el Visor de eventos. Saber leer logs es una habilidad crítica en seguridad.",
+      "Entender profundamente cómo funciona un sistema operativo permite comprender cómo se protege, cómo se ataca (teóricamente) y cómo se detectan actividades anómalas."
     ],
     videos: []
   },
   {
     id: "programacion",
-    titulo: "FUNDAMENTOS DE PROGRAMACIÓN",
-    subtitulo: "Módulo 3 - Vampy Security - Piensa como profesional",
+    titulo: "PROGRAMACIÓN",
+    subtitulo: "Módulo 3 · Fundamentos de Programación",
     teorias: [
-      "Programar es dar instrucciones. Variables, condiciones y bucles son la base de todo programa."
+      "Programar es escribir instrucciones precisas y lógicas para que una computadora realice una tarea. La máquina solo entiende lenguaje máquina (ceros y unos); los lenguajes de alto nivel nos permiten trabajar de forma más humana.",
+      "Una variable es un espacio de memoria al que le damos un nombre y en el que almacenamos un valor. Ese valor puede cambiar durante la ejecución del programa.",
+      "Tipos de datos fundamentales: enteros, números de punto flotante, cadenas de texto (strings), booleanos (verdadero/falso), listas/arreglos y estructuras más complejas como diccionarios u objetos.",
+      "Las estructuras de control dirigen el flujo del programa: condicionales (if / else / elif) y bucles (for, while). Permiten tomar decisiones y repetir acciones.",
+      "Una función es un bloque de código reutilizable que recibe parámetros, ejecuta una lógica y puede devolver un resultado. Ayuda a organizar y no repetir código.",
+      "Un algoritmo es una secuencia finita de pasos bien definidos para resolver un problema. Antes de escribir código se debe pensar el algoritmo.",
+      "Python es el lenguaje más recomendado para iniciarse en ciberseguridad por su sintaxis clara y su enorme ecosistema de librerías. Bash es indispensable para automatizar tareas en Linux.",
+      "La programación orientada a objetos organiza el código en clases (moldes) y objetos (instancias). Facilita la creación de programas más grandes y mantenibles.",
+      "El manejo de errores (try / except o try / catch) permite que un programa responda de forma controlada cuando algo sale mal, en lugar de simplemente fallar.",
+      "Leer y escribir archivos es una habilidad básica: abrir un archivo, procesar su contenido y guardar resultados. Muchas tareas de seguridad involucran el análisis de archivos de texto o logs.",
+      "Entender programación no significa solo saber escribir código. Significa desarrollar pensamiento lógico y estructurado, esencial para analizar sistemas y entender vulnerabilidades de forma seria."
     ],
     videos: []
   },
   {
     id: "webs",
-    titulo: "CÓMO FUNCIONAN LOS SITIOS WEB",
-    subtitulo: "Módulo 4 - Vampy Security - Cliente y Servidor",
+    titulo: "WEBS",
+    subtitulo: "Módulo 4 · Cómo Funcionan los Sitios Web",
     teorias: [
-      "Cuando escribes google.com, tu navegador pide información y el servidor responde. Eso es cliente y servidor.",
-      "HTTP y HTTPS: HTTPS es la versión segura, por eso tiene el candado."
+      "Cuando escribes una URL en el navegador se inicia una conversación entre el cliente (navegador) y el servidor. El cliente solicita un recurso y el servidor responde.",
+      "HTTP es el protocolo de comunicación. HTTPS es la versión segura que cifra el tráfico mediante TLS. El cifrado protege la confidencialidad e integridad de los datos en tránsito.",
+      "Códigos de estado HTTP más importantes: 200 (éxito), 301/302 (redirección), 400 (petición incorrecta), 401 (no autenticado), 403 (prohibido), 404 (no encontrado), 500 (error interno del servidor).",
+      "HTML estructura el contenido de la página. CSS controla la presentación visual. JavaScript añade comportamiento e interactividad del lado del cliente.",
+      "Las cookies son pequeños fragmentos de datos que el servidor envía al navegador para recordar información entre peticiones (preferencias, sesión, etc.).",
+      "Las sesiones permiten que el servidor mantenga el estado de un usuario a lo largo de varias peticiones. Normalmente se identifican con un Session ID.",
+      "Los formularios HTML envían datos al servidor usando los métodos GET (parámetros visibles en la URL) o POST (datos en el cuerpo de la petición).",
+      "Las APIs (Application Programming Interfaces) permiten que distintas aplicaciones se comuniquen entre sí, generalmente usando HTTP y formatos como JSON.",
+      "El DOM (Document Object Model) es la representación en memoria de la página HTML. JavaScript puede leerlo y modificarlo para cambiar la página dinámicamente.",
+      "Los servidores web más utilizados son Nginx, Apache e IIS. Reciben las peticiones HTTP y entregan archivos estáticos o ejecutan código del lado del servidor (PHP, Python, Node.js, etc.).",
+      "Conceptos adicionales relevantes: CORS, headers HTTP de seguridad (CSP, HSTS, X-Frame-Options), almacenamiento local (localStorage), y la diferencia entre renderizado del lado del servidor y del cliente.",
+      "Comprender el funcionamiento interno de la web es indispensable para entender las vulnerabilidades web más comunes desde una perspectiva teórica y profesional."
     ],
     videos: []
   },
   {
     id: "hacking",
     titulo: "HACKING ÉTICO",
-    subtitulo: "Módulo 5 - Vampy Security - Hacking Ético Teórico",
+    subtitulo: "Módulo 5 · Hacking Ético Teórico y Profesional",
     teorias: [
-      "Hacking Ético es evaluar sistemas con permiso para ayudar a mejorar la seguridad, no para dañar. Todo legal, todo teórico aquí en VSEC-MX de Vampy Security.",
-      "Fases del Hacking: Reconocimiento, escaneo, explotación, mantener acceso y limpiar huellas. Aquí solo lo estudiamos en teoría."
+      "Hacking Ético es el proceso de evaluar la seguridad de sistemas, redes o aplicaciones con autorización explícita del propietario, con el único propósito de identificar debilidades y ayudar a fortalecer la seguridad.",
+      "Todo el contenido de este módulo es estrictamente teórico y educativo. Cualquier práctica real debe realizarse exclusivamente en entornos controlados y con permiso por escrito. El uso no autorizado es ilegal.",
+      "La diferencia fundamental: el hacker ético actúa dentro de la ley, con alcance definido y reporta los hallazgos. El atacante malicioso actúa sin permiso y con intención de daño o beneficio ilícito.",
+      "La metodología clásica de un ejercicio de hacking ético se divide en cinco fases: Reconocimiento, Escaneo, Obtención de acceso, Mantenimiento de acceso y Limpieza de huellas.",
+      "Fase 1 – Reconocimiento (Information Gathering): recopilación de información sobre el objetivo. Puede ser pasivo (fuentes públicas) o activo. Se buscan dominios, direcciones IP, tecnologías, empleados, etc.",
+      "Fase 2 – Escaneo: identificación de sistemas activos, puertos abiertos, servicios en ejecución y posibles versiones vulnerables. Se utilizan conceptos de escaneo de puertos y detección de servicios.",
+      "Fase 3 – Obtención de acceso (Gaining Access): aprovechamiento teórico de vulnerabilidades para conseguir acceso al sistema. Se estudian conceptos como configuraciones inseguras, fallos de autenticación, inyecciones, etc.",
+      "Fase 4 – Mantenimiento de acceso: estudio teórico de cómo un atacante podría intentar persistir en el sistema (cuentas nuevas, mecanismos de arranque, etc.). Se analiza para saber detectarlo y eliminarlo.",
+      "Fase 5 – Limpieza de huellas: el atacante intenta eliminar evidencias de su actividad (registros, historiales). El profesional de seguridad estudia esta fase para saber qué rastros buscar y cómo proteger los logs.",
+      "Existen metodologías y marcos de referencia profesionales: PTES (Penetration Testing Execution Standard), OWASP Testing Guide (para aplicaciones web) y el framework MITRE ATT&CK (tácticas y técnicas de atacantes).",
+      "Principios éticos no negociables: autorización por escrito, alcance claramente definido, no causar daño, confidencialidad de los hallazgos, reporte completo y destrucción de datos sensibles al finalizar.",
+      "La verdadera ciberseguridad no se trata de atacar. Se trata de entender cómo piensan los atacantes para construir defensas más robustas. El conocimiento sin ética es peligroso; con ética es poder profesional.",
+      "Al completar esta academia tendrás una base teórica sólida y real. A partir de aquí podrás continuar hacia laboratorios controlados, certificaciones o estudios avanzados, siempre desde el lado legal y profesional."
     ],
     videos: []
   }
 ];
-// =========================================================
-// HASTA AQUI AGREGAS
-// Teoría: "tu texto normal",
-// Video: "https://files.catbox.moe/xxx.mp4",
-// =========================================================
 
 const tabsEl = document.getElementById('tabs');
 const contenidoEl = document.getElementById('contenido');
 let activo = 'inicio';
+
 function pintarTabs(){
-  tabsEl.innerHTML = MODULOS.map(m => `<button onclick="cambiar('${m.id}')" class="${m.id===activo?'active':''}">${m.titulo}</button>`).join('');
+  tabsEl.innerHTML = MODULOS.map(m => 
+    `<button onclick="cambiar('${m.id}')" class="${m.id===activo?'active':''}">${m.titulo}</button>`
+  ).join('');
 }
+
 function cambiar(id){
   activo = id;
   pintarTabs();
   pintarContenido();
   window.scrollTo({top:0, behavior:'smooth'});
 }
+
 function pintarContenido(){
-  const m = MODULOS.find(x => x.id===activo);
+  const m = MODULOS.find(x => x.id === activo);
   let html = '';
-  if(m.id==='inicio'){
-    html += `<div class="hero"><h2>Bienvenido a VSEC-MX</h2><p style="color:#1e90ff;font-weight:bold;letter-spacing:2px">VAMPY SECURITY</p>${m.teorias.map(t=>`<p>${t}</p>`).join('')}<br><span class="badge">100% TEÓRICO</span><span class="badge">SIN INSTALAR NADA</span><span class="badge">SOLO VIDEOS</span><br><br><button class="btn" onclick="cambiar('redes')">Empezar por Redes →</button></div>`;
+
+  if(m.id === 'inicio'){
+    html += `
+      <div class="hero">
+        <div class="sub">VAMPY SECURITY</div>
+        <h2>Academia VSEC-MX</h2>
+        ${m.teorias.map(t => `<p>${t}</p>`).join('')}
+        <div style="margin:20px 0 10px">
+          <span class="badge">100% Teórico</span>
+          <span class="badge">Formación Sólida</span>
+          <span class="badge">Sin Humo</span>
+        </div>
+        <button class="btn" onclick="cambiar('redes')">Comenzar por Redes →</button>
+      </div>
+    `;
     MODULOS.slice(1).forEach(mod => {
-      html += `<div class="card"><h3>${mod.titulo}</h3><p>${mod.subtitulo}</p><button class="btn" onclick="cambiar('${mod.id}')">Ver módulo →</button></div>`;
+      html += `
+        <div class="modulo-card">
+          <h3>${mod.titulo}</h3>
+          <p>${mod.subtitulo}</p>
+          <button class="btn" onclick="cambiar('${mod.id}')">Entrar al módulo →</button>
+        </div>
+      `;
     });
   } else {
-    html += `<div class="hero"><h2>${m.titulo}</h2><p><b>${m.subtitulo}</b></p></div>`;
-    html += `<div class="card"><h3>Teoría - Vampy Security</h3>${m.teorias.length ? m.teorias.map(t=>`<div class="teoria"><p>${t}</p></div>`).join('') : '<p>Aún no hay teoría aquí.</p>'}</div>`;
-    html += `<div class="card"><h3>Videos - Vampy Security</h3>${m.videos.length ? m.videos.map(v=>`<video controls preload="metadata" src="${v}"></video>`).join('') : '<p>Aún no hay videos aquí. Cuando subas a Catbox, pega el link .mp4 aquí.</p>'}</div>`;
+    html += `
+      <div class="hero">
+        <div class="sub">VAMPY SECURITY</div>
+        <h2>${m.titulo}</h2>
+        <p style="color:#8b949e">${m.subtitulo}</p>
+      </div>
+      <div class="card">
+        <h3>Teoría del módulo</h3>
+        ${m.teorias.map(t => `<div class="teoria"><p>${t}</p></div>`).join('')}
+      </div>
+      <div class="card">
+        <h3>Videos del módulo</h3>
+        ${m.videos.length 
+          ? m.videos.map(v => `<video controls preload="metadata" src="${v}"></video>`).join('') 
+          : '<p style="color:#8b949e">Aún no hay videos en este módulo. Cuando subas tus videos a Catbox, pega aquí el enlace .mp4.</p>'}
+      </div>
+    `;
   }
   contenidoEl.innerHTML = html;
 }
+
 pintarTabs();
 pintarContenido();
 </script>
