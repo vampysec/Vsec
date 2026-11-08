@@ -9,246 +9,61 @@
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="canonical" href="https://vampysec.github.io/Vsec/">
-
 <meta property="og:type" content="website">
 <meta property="og:title" content="VSEC-MX | Vampy Security - Academia de Hacking Ético Teórico">
 <meta property="og:description" content="Formación sólida y 100% teórica en ciberseguridad. Desde lo más básico hasta hacking ético profesional.">
 <meta property="og:url" content="https://vampysec.github.io/Vsec/">
 <meta property="og:site_name" content="Vampy Security - VSEC-MX">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
   *{margin:0;padding:0;box-sizing:border-box}
-  body{
-    background:#080b10;
-    color:#e6edf3;
-    font-family:'Inter', system-ui, -apple-system, sans-serif;
-    line-height:1.7;
-    font-size:16px;
-  }
-
-  header{
-    background:#0d1117;
-    padding:22px 20px 18px;
-    text-align:center;
-    border-bottom:1px solid #21262d;
-    position:sticky;
-    top:0;
-    z-index:100;
-    backdrop-filter:blur(12px);
-  }
-  .marca{
-    color:#58a6ff;
-    font-weight:600;
-    font-size:12px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:6px;
-  }
-  header h1{
-    font-size:34px;
-    font-weight:700;
-    color:#58a6ff;
-    letter-spacing:1px;
-    line-height:1.1;
-  }
+  body{background:#080b10;color:#e6edf3;font-family:'Inter', system-ui, -apple-system, sans-serif;line-height:1.7;font-size:16px}
+  header{background:#0d1117;padding:22px 20px 18px;text-align:center;border-bottom:1px solid #21262d;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+  .marca{color:#58a6ff;font-weight:600;font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+  header h1{font-size:34px;font-weight:700;color:#58a6ff;letter-spacing:1px;line-height:1.1}
   header h1 span{color:#e6edf3}
-  header p{
-    color:#8b949e;
-    font-size:14px;
-    margin-top:6px;
-  }
-
-  nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    justify-content:center;
-    margin-top:18px;
-  }
-  nav button{
-    background:#161b22;
-    color:#c9d1d9;
-    border:1px solid #30363d;
-    padding:9px 16px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:500;
-    font-size:13.5px;
-    transition:all 0.2s ease;
-  }
-  nav button:hover{
-    background:#21262d;
-    border-color:#58a6ff;
-    color:#fff;
-  }
-  nav button.active{
-    background:#1f6feb;
-    border-color:#1f6feb;
-    color:#fff;
-  }
-
-  main{
-    max-width:880px;
-    margin:0 auto;
-    padding:30px 20px 60px;
-  }
-
-  .hero{
-    background:linear-gradient(145deg, #0d1117 0%, #161b22 100%);
-    border:1px solid #30363d;
-    border-radius:16px;
-    padding:32px 28px;
-    margin-bottom:28px;
-    text-align:center;
-  }
-  .hero h2{
-    font-size:28px;
-    font-weight:700;
-    color:#e6edf3;
-    margin-bottom:12px;
-  }
-  .hero .sub{
-    color:#58a6ff;
-    font-weight:600;
-    font-size:14px;
-    letter-spacing:1.5px;
-    margin-bottom:16px;
-  }
-  .hero p{
-    color:#8b949e;
-    font-size:15.5px;
-    max-width:640px;
-    margin:0 auto 12px;
-  }
-
-  .badge{
-    display:inline-block;
-    background:rgba(31,111,235,0.15);
-    color:#58a6ff;
-    border:1px solid rgba(31,111,235,0.4);
-    padding:5px 14px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:500;
-    margin:4px 3px;
-  }
-
-  .card{
-    background:#0d1117;
-    border:1px solid #21262d;
-    border-radius:14px;
-    padding:24px 22px;
-    margin-bottom:20px;
-  }
-  .card h3{
-    color:#58a6ff;
-    font-size:18px;
-    font-weight:600;
-    margin-bottom:16px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-
-  .teoria{
-    background:#161b22;
-    border-left:3px solid #1f6feb;
-    padding:14px 18px;
-    margin-bottom:12px;
-    border-radius:0 10px 10px 0;
-  }
-  .teoria p{
-    margin:0;
-    color:#c9d1d9;
-    font-size:15px;
-    line-height:1.75;
-  }
-
-  .btn{
-    display:inline-block;
-    background:#1f6feb;
-    color:#fff;
-    text-decoration:none;
-    padding:11px 22px;
-    border-radius:8px;
-    margin-top:14px;
-    font-weight:600;
-    font-size:14.5px;
-    border:none;
-    cursor:pointer;
-    transition:background 0.2s;
-  }
+  header p{color:#8b949e;font-size:14px;margin-top:6px}
+  nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+  nav button{background:#161b22;color:#c9d1d9;border:1px solid #30363d;padding:9px 16px;border-radius:8px;cursor:pointer;font-weight:500;font-size:13.5px;transition:all 0.2s ease}
+  nav button:hover{background:#21262d;border-color:#58a6ff;color:#fff}
+  nav button.active{background:#1f6feb;border-color:#1f6feb;color:#fff}
+  main{max-width:880px;margin:0 auto;padding:30px 20px 60px}
+  .hero{background:linear-gradient(145deg, #0d1117 0%, #161b22 100%);border:1px solid #30363d;border-radius:16px;padding:32px 28px;margin-bottom:28px;text-align:center}
+  .hero h2{font-size:28px;font-weight:700;color:#e6edf3;margin-bottom:12px}
+  .hero .sub{color:#58a6ff;font-weight:600;font-size:14px;letter-spacing:1.5px;margin-bottom:16px}
+  .hero p{color:#8b949e;font-size:15.5px;max-width:640px;margin:0 auto 12px}
+  .badge{display:inline-block;background:rgba(31,111,235,0.15);color:#58a6ff;border:1px solid rgba(31,111,235,0.4);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500;margin:4px 3px}
+  .card{background:#0d1117;border:1px solid #21262d;border-radius:14px;padding:24px 22px;margin-bottom:20px}
+  .card h3{color:#58a6ff;font-size:18px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .teoria{background:#161b22;border-left:3px solid #1f6feb;padding:14px 18px;margin-bottom:12px;border-radius:0 10px 10px 0}
+  .teoria p{margin:0;color:#c9d1d9;font-size:15px;line-height:1.75}
+  .btn{display:inline-block;background:#1f6feb;color:#fff;text-decoration:none;padding:11px 22px;border-radius:8px;margin-top:14px;font-weight:600;font-size:14.5px;border:none;cursor:pointer;transition:background 0.2s}
   .btn:hover{background:#388bfd}
-
-  .modulo-card{
-    background:#0d1117;
-    border:1px solid #21262d;
-    border-radius:12px;
-    padding:20px 22px;
-    margin-bottom:14px;
-    transition:border-color 0.2s;
-  }
+  .modulo-card{background:#0d1117;border:1px solid #21262d;border-radius:12px;padding:20px 22px;margin-bottom:14px;transition:border-color 0.2s}
   .modulo-card:hover{border-color:#30363d}
-  .modulo-card h3{
-    color:#e6edf3;
-    font-size:17px;
-    margin-bottom:6px;
-  }
-  .modulo-card p{
-    color:#8b949e;
-    font-size:14px;
-    margin-bottom:12px;
-  }
-
-  footer{
-    text-align:center;
-    color:#484f58;
-    padding:40px 20px;
-    font-size:13px;
-    border-top:1px solid #21262d;
-  }
+  .modulo-card h3{color:#e6edf3;font-size:17px;margin-bottom:6px}
+  .modulo-card p{color:#8b949e;font-size:14px;margin-bottom:12px}
+  footer{text-align:center;color:#484f58;padding:40px 20px;font-size:13px;border-top:1px solid #21262d}
   footer b{color:#8b949e}
-
-  video{
-    width:100%;
-    border-radius:10px;
-    margin-top:12px;
-    background:#000;
-    max-height:480px;
-  }
-
-  @media (max-width:768px){
-    header{padding:16px 14px}
-    header h1{font-size:26px}
-    nav button{padding:8px 12px;font-size:12.5px}
-    main{padding:20px 14px 50px}
-    .hero{padding:24px 18px}
-    .hero h2{font-size:22px}
-    .card{padding:18px 16px}
-    .btn{width:100%;text-align:center}
-  }
+  video{width:100%;border-radius:10px;margin-top:12px;background:#000;max-height:480px}
+  .video-item{margin-bottom:24px}
+  .video-nombre{color:#e6edf3;font-weight:600;font-size:16px;margin-bottom:4px}
+  @media (max-width:768px){header{padding:16px 14px}header h1{font-size:26px}nav button{padding:8px 12px;font-size:12.5px}main{padding:20px 14px 50px}.hero{padding:24px 18px}.hero h2{font-size:22px}.card{padding:18px 16px}.btn{width:100%;text-align:center}}
 </style>
 </head>
 <body>
-
 <header>
   <div class="marca">Vampy Security</div>
   <h1>VSEC<span>-MX</span></h1>
   <p>Academia de Ciberseguridad · 100% Teórico · Formación Profesional</p>
   <nav id="tabs"></nav>
 </header>
-
 <main id="contenido"></main>
-
 <footer>
   <b>VAMPY SECURITY — VSEC-MX © 2026</b><br>
   Formación teórica en Ciberseguridad y Hacking Ético
 </footer>
-
 <script>
 const MODULOS = [
   {
@@ -375,28 +190,23 @@ const MODULOS = [
     videos: []
   }
 ];
-
 const tabsEl = document.getElementById('tabs');
 const contenidoEl = document.getElementById('contenido');
 let activo = 'inicio';
-
 function pintarTabs(){
   tabsEl.innerHTML = MODULOS.map(m => 
     `<button onclick="cambiar('${m.id}')" class="${m.id===activo?'active':''}">${m.titulo}</button>`
   ).join('');
 }
-
 function cambiar(id){
   activo = id;
   pintarTabs();
   pintarContenido();
   window.scrollTo({top:0, behavior:'smooth'});
 }
-
 function pintarContenido(){
   const m = MODULOS.find(x => x.id === activo);
   let html = '';
-
   if(m.id === 'inicio'){
     html += `
       <div class="hero">
@@ -434,14 +244,18 @@ function pintarContenido(){
       <div class="card">
         <h3>Videos del módulo</h3>
         ${m.videos.length 
-          ? m.videos.map(v => `<video controls preload="metadata" src="${v}"></video>`).join('') 
+          ? m.videos.map(v => `
+            <div class="video-item">
+              <p class="video-nombre">🎬 ${v.nombre}</p>
+              <video controls preload="metadata" src="${v.url}"></video>
+            </div>
+          `).join('') 
           : '<p style="color:#8b949e">Aún no hay videos en este módulo. Cuando subas tus videos a Catbox, pega aquí el enlace .mp4.</p>'}
       </div>
     `;
   }
   contenidoEl.innerHTML = html;
 }
-
 pintarTabs();
 pintarContenido();
 </script>
