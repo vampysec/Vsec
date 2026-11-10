@@ -313,7 +313,7 @@ function pintarContenido(){
             <div class="video-item">
               <p class="video-nombre">🎬 ${v.nombre}</p>
               <p style="color:#8b949e; font-size:14px;">${v.descripcion || ''}<p>
-              <img src="${v.imagen}" alt="${v.nombre}" class="video-imagen" />
+              ${v.imagen ? `<img src="${v.imagen}" alt="${v.nombre}" style="width:100%; max-width:420px; height:auto; display:block; margin:12px auto; border-radius:10px;" />` : ''}
               <video controls preload="metadata" src="${v.url}"></video>
             </div>
           `).join('') 
