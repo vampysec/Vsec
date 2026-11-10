@@ -155,6 +155,7 @@ const MODULOS = [
         nombre: "Flag Sync",
         url: "https://res.cloudinary.com/vxqtmxe0/video/upload/v1794187486/flag_sync.mp4"
       },
+      
   {
     nombre: "Flag ACK",
     url: "https://res.cloudinary.com/vxqtmxe0/video/upload/v1794272353/flag_ack.mp4"
@@ -162,6 +163,11 @@ const MODULOS = [
   {
     nombre: "Triple apretón de manos, también conocido como Three-Way Handshake",
     url: "https://res.cloudinary.com/vxqtmxe0/video/upload/v1794273649/tam.mp4"
+  },
+  {
+    nombre: "Flag RST",
+    url: "https://res.cloudinary.com/vxqtmxe0/video/upload/v1794274353/rst.mp4"
+    imagen: "mk.png"
   }
     ]
   },
@@ -306,6 +312,7 @@ function pintarContenido(){
             <div class="video-item">
               <p class="video-nombre">🎬 ${v.nombre}</p>
               <p style="color:#8b949e; font-size:14px;">${v.descripcion || ''}<p>
+              <img src="${v.imagen}" alt="${v.nombre}" class="video-imagen" />
               <video controls preload="metadata" src="${v.url}"></video>
             </div>
           `).join('') 
