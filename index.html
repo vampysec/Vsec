@@ -421,20 +421,19 @@ function pintarContenido(){
         <h3>Teoría del módulo</h3>
         ${m.teorias.map(t => `<div class="teoria"><p>${t}</p></div>`).join('')}
       </div>
+${m.videos.length ? `
       <div class="card">
         <h3>Videos del módulo</h3>
-        ${m.videos.length 
-          ? m.videos.map(v => `
+        ${m.videos.map(v => `
             <div class="video-item">
               <p class="video-nombre">🎬 ${v.nombre}</p>
               <p style="color:#8b949e; font-size:14px;">${v.descripcion || ''}<p>
               <video controls preload="metadata" src="${v.url}"></video>
               ${v.imagen ? `<img src="${v.imagen}" alt="${v.nombre}" onclick="this.style.maxWidth = (this.style.maxWidth === '420px' ? '95%' : '420px')" style="width:100%; max-width:420px; height:auto; display:block; margin:12px auto; border-radius:10px; cursor:zoom-in;" />` : ''}
-               </div>
-          `).join('') 
-          : '<p style="color:#8b949e">Aún no hay videos en este módulo. Cuando subas tus videos a Catbox, pega aquí el enlace .mp4.</p>'}
+            </div>
+        `).join('')}
       </div>
-    `;
+` : ''}
   }
   contenidoEl.innerHTML = html;
 }
