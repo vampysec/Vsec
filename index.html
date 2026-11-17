@@ -286,6 +286,10 @@ const MODULOS = [
       "El Registro de Windows es una base de datos jerárquica donde el sistema y las aplicaciones guardan configuraciones. En Linux la configuración suele estar en archivos de texto planos.",
       "La memoria virtual permite usar espacio en disco como si fuera RAM adicional (archivo de paginación en Windows, swap en Linux). Es fundamental para el rendimiento del sistema.",
       "Los logs registran eventos del sistema. En Linux suelen estar en /var/log. En Windows se consultan con el Visor de eventos. Saber leer logs es una habilidad crítica en seguridad.",
+      "Los usuarios y grupos organizan quién puede hacer qué en el sistema. Cada usuario pertenece a uno o varios grupos, y los permisos se pueden asignar por grupo. Crear cuentas separadas para cada persona y no compartir la cuenta de administrador es una práctica básica de seguridad.",
+      "La terminal (línea de comandos) permite controlar el sistema escribiendo órdenes en texto. En Linux es la herramienta principal del profesional de seguridad: permite ver procesos, revisar logs, gestionar archivos y automatizar tareas con scripts.",
+      "El arranque del sistema sigue una cadena: el firmware (BIOS o UEFI) verifica el hardware, luego carga el gestor de arranque, que a su vez carga el kernel y los servicios iniciales. Entender esta cadena ayuda a comprender qué puede fallar y dónde se puede intervenir.",
+      "La gestión de paquetes instala, actualiza y elimina software desde repositorios oficiales. Mantener el sistema actualizado es una de las defensas más efectivas: muchas vulnerabilidades se corrigen con actualizaciones.",
       "Entender profundamente cómo funciona un sistema operativo permite comprender cómo se protege, cómo se ataca (teóricamente) y cómo se detectan actividades anómalas."
     ],
     videos: [
@@ -303,13 +307,29 @@ const MODULOS = [
       },
       {
         nombre: "El Kernel",
-        descripcion: "El kernel es el núcleo del sistema operativo. Es el que habla directo con el hardware y reparte los recursos: CPU, memoria y dispositivos. Sin kernel, las apps no podrían usar el hardware. En Linux, el kernel es de código abierto.",
+        descripcion: "El kernel es el núcleo del sistema operativo. Es el que habla directo con el hardware y reparte los recursos: CPU, memoria y dispositivos. Sin kernel, las apps no podrían usar el hardware. En Linux, el kernel es de código abierto. ⏳ Este tema espera su video.",
         imagen: "e.jpg"
       },
       {
         nombre: "Proceso / PID",
-        descripcion: "Un proceso es un programa en ejecución. Cada proceso tiene un identificador único llamado PID, su propio espacio de memoria y un estado: en ejecución, esperando o terminado. Cuando abres Chrome, se crea un proceso con su PID.",
+        descripcion: "Un proceso es un programa en ejecución. Cada proceso tiene un identificador único llamado PID, su propio espacio de memoria y un estado: en ejecución, esperando o terminado. Cuando abres Chrome, se crea un proceso con su PID. ⏳ Este tema espera su video.",
         imagen: "f.jpg"
+      },
+      {
+        nombre: "Permisos en Linux",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "El sistema de archivos",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Servicios y procesos",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Logs del sistema",
+        descripcion: "⏳ Este tema espera su video."
       }
     ]
   },
@@ -328,9 +348,33 @@ const MODULOS = [
       "La programación orientada a objetos organiza el código en clases (moldes) y objetos (instancias). Facilita la creación de programas más grandes y mantenibles.",
       "El manejo de errores (try / except o try / catch) permite que un programa responda de forma controlada cuando algo sale mal, en lugar de simplemente fallar.",
       "Leer y escribir archivos es una habilidad básica: abrir un archivo, procesar su contenido y guardar resultados. Muchas tareas de seguridad involucran el análisis de archivos de texto o logs.",
+      "Los lenguajes compilados (como C o Go) traducen todo el código a lenguaje máquina antes de ejecutarlo. Los lenguajes interpretados (como Python o JavaScript) lo traducen línea por línea mientras se ejecuta. Cada enfoque tiene ventajas en velocidad y flexibilidad.",
+      "Las expresiones regulares (regex) son patrones para buscar y validar texto. Son muy útiles en seguridad para analizar logs, validar entradas y detectar patrones sospechosos en grandes cantidades de datos.",
+      "El control de versiones con Git guarda el historial de cambios de un proyecto. Permite trabajar en equipo, volver a una versión anterior y documentar cada cambio. Es una herramienta estándar en cualquier equipo profesional.",
       "Entender programación no significa solo saber escribir código. Significa desarrollar pensamiento lógico y estructurado, esencial para analizar sistemas y entender vulnerabilidades de forma seria."
     ],
-    videos: []
+    videos: [
+      {
+        nombre: "Variables y tipos de datos",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Condicionales (if / else)",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Bucles (for / while)",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Funciones",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Python para ciberseguridad",
+        descripcion: "⏳ Este tema espera su video."
+      }
+    ]
   },
   {
     id: "webs",
@@ -348,9 +392,33 @@ const MODULOS = [
       "El DOM (Document Object Model) es la representación en memoria de la página HTML. JavaScript puede leerlo y modificarlo para cambiar la página dinámicamente.",
       "Los servidores web más utilizados son Nginx, Apache e IIS. Reciben las peticiones HTTP y entregan archivos estáticos o ejecutan código del lado del servidor (PHP, Python, Node.js, etc.).",
       "Conceptos adicionales relevantes: CORS, headers HTTP de seguridad (CSP, HSTS, X-Frame-Options), almacenamiento local (localStorage), y la diferencia entre renderizado del lado del servidor y del cliente.",
+      "Los certificados TLS son los que hacen posible el candado de HTTPS. Una autoridad certificadora verifica que el servidor es quien dice ser. Si el certificado no es válido, el navegador advierte al usuario.",
+      "La autenticación verifica quién eres: contraseñas, segundo factor (2FA) o tokens. La autorización define qué puedes hacer una vez autenticado. Son dos conceptos distintos y ambos deben estar bien implementados.",
+      "Las bases de datos guardan la información de los sitios web. SQL es el lenguaje para consultarlas. Comprender cómo se almacenan y consultan los datos es necesario para entender vulnerabilidades como la inyección SQL desde la teoría.",
       "Comprender el funcionamiento interno de la web es indispensable para entender las vulnerabilidades web más comunes desde una perspectiva teórica y profesional."
     ],
-    videos: []
+    videos: [
+      {
+        nombre: "Cómo funciona una petición HTTP",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Códigos de estado HTTP",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Cookies y sesiones",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Qué es una API",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "HTML, CSS y JavaScript",
+        descripcion: "⏳ Este tema espera su video."
+      }
+    ]
   },
   {
     id: "hacking",
@@ -368,10 +436,37 @@ const MODULOS = [
       "Fase 5 – Limpieza de huellas: el atacante intenta eliminar evidencias de su actividad (registros, historiales). El profesional de seguridad estudia esta fase para saber qué rastros buscar y cómo proteger los logs.",
       "Existen metodologías y marcos de referencia profesionales: PTES (Penetration Testing Execution Standard), OWASP Testing Guide (para aplicaciones web) y el framework MITRE ATT&CK (tácticas y técnicas de atacantes).",
       "Principios éticos no negociables: autorización por escrito, alcance claramente definido, no causar daño, confidencialidad de los hallazgos, reporte completo y destrucción de datos sensibles al finalizar.",
+      "El reporte de hallazgos es el entregable principal de un ejercicio de hacking ético. Incluye un resumen ejecutivo, cada hallazgo con su severidad, la evidencia y la recomendación para corregirlo. Un buen reporte es claro, honesto y útil para quien debe corregir.",
+      "La ruta profesional continúa con laboratorios controlados y certificaciones reconocidas, como CompTIA Security+, CEH o eJPT, entre otras. Ninguna certificación sustituye la práctica constante y la ética profesional.",
       "La verdadera ciberseguridad no se trata de atacar. Se trata de entender cómo piensan los atacantes para construir defensas más robustas. El conocimiento sin ética es peligroso; con ética es poder profesional.",
       "Al completar esta academia tendrás una base teórica sólida y real. A partir de aquí podrás continuar hacia laboratorios controlados, certificaciones o estudios avanzados, siempre desde el lado legal y profesional."
     ],
-    videos: []
+    videos: [
+      {
+        nombre: "Fase 1 – Reconocimiento",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Fase 2 – Escaneo",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Fase 3 – Obtención de acceso",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Fase 4 – Mantenimiento de acceso",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Fase 5 – Limpieza de huellas",
+        descripcion: "⏳ Este tema espera su video."
+      },
+      {
+        nombre: "Metodologías: PTES, OWASP y MITRE ATT&CK",
+        descripcion: "⏳ Este tema espera su video."
+      }
+    ]
   }
 ];
 
